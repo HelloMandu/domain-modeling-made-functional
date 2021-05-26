@@ -57,4 +57,49 @@
 - Awareness of reporting requirements
     - it's easy to focus only on processes and transactions when trying to understand the domain
     - any business needs to understand what happened in th past--reporting is always part of the domain
-    
+  
+### Expanding the Events to the Edges
+- To start, you might ask if any events occur before the leftmost event
+- we might extend the events on the shipping side of the business
+- Extending the events out as far as you can in either direction is another great way of catching missing requirements
+
+### Documenting Commands
+- For example, the customer wanted us to receive an order form, or your boss asked you to do something. We call these requests commands in DDD terminology
+- Commands are always written in the imperative
+- An event triggers a command, which initiates dome business workflow. The output of the workflow is come more events
+- This way of thinking about business processes--a pipeline with an input and some outputs--is an excellent fit with the way that functional programming works
+- By the way, not all events need be associated with a command. Some events might be triggered by a scheduler or monitoring system
+
+### Partitioning the Domain into Subdomains
+- The big picture is still quite chaotic. We'll have to tame it before we start writing any code
+- When faced with a large problem, it's natural to break it into smaller components that can be addressed separately
+- We all Know what a "domain expert" is; as programmers we ourselves are often experts in a number of domains // game, web, network, language
+
+### Creating a Solution Using bounded Contexts
+- Understanding the problem doesn't mean that building a solution is easy
+- We should only capture the information that is relevant to solving a particular problem
+- We therefore need to create a distinction between a "problem space" and a "solution space", and they must be treated as two different things
+- To build the solution we will create a model of the problem domain
+
+- subdomain -> bounded contexts
+  - why context?
+    - each context represents some specialized knowledge in the solution
+    - information taken out of context can be confusing or unusable
+  - why bounded?
+    - In the world of software we want to reduce coupling between separate subsystems so that they can evolve independently
+    - can do this using standard software practices // explicit APIs between subsystems, avoiding dependencies such as shared code
+    - domain model will never be as rich as the real world, but tolerate this in exchange for less complexity and easier maintenance
+  
+- domain and bounded context does not always 1:1 relationship, possible 1:N || N:1
+- It's important that each bounded context have a clear responsibility
+
+### Getting the Contexts Right
+- one of the important challenges of a domain-driven design is to get these context boundaries right
+- Listen to the domain experts
+- Pay attention to existing team and department boundaries
+- Don't forget the "bounded" part of a bounded context (aka Good fences make good neighbors)
+- Design for autonomy, If thw groups contribute to the same bounded context, they might end up pulling the design in different directions as it evolves
+- Design for friction-free business workflows, always focus on business and customer value rather than any kind of "pure" design
+
+### Creating Context Maps
+
