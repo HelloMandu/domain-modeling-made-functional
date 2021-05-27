@@ -70,12 +70,12 @@
 - This way of thinking about business processes--a pipeline with an input and some outputs--is an excellent fit with the way that functional programming works
 - By the way, not all events need be associated with a command. Some events might be triggered by a scheduler or monitoring system
 
-### Partitioning the Domain into Subdomains
+## Partitioning the Domain into Subdomains
 - The big picture is still quite chaotic. We'll have to tame it before we start writing any code
 - When faced with a large problem, it's natural to break it into smaller components that can be addressed separately
 - We all Know what a "domain expert" is; as programmers we ourselves are often experts in a number of domains // game, web, network, language
 
-### Creating a Solution Using bounded Contexts
+## Creating a Solution Using bounded Contexts
 - Understanding the problem doesn't mean that building a solution is easy
 - We should only capture the information that is relevant to solving a particular problem
 - We therefore need to create a distinction between a "problem space" and a "solution space", and they must be treated as two different things
@@ -110,13 +110,13 @@
 - It is important to prioritize and not to attempt to implement all the bounded contexts at the same time--the often leads to failure
 - Focus instead on those bounded contexts that add the most value, and then expand from there
 
-### Creating a Ubiquitous Language
+## Creating a Ubiquitous Language
 - Code and the domain expert must share the same model
 - We should not have things in our design that do not represent something in the domain expert's model
 - The language that defines the shared mental model for the business domain. this language should used everywhere in the project
 - The construction of the ubiquitous language is not a one-way process dictated by the domain expert, it is a collaboration between everyone on the team
 
-### Wrapping Up
+## Wrapping Up
 - Focus on events and processes rather than data
 - Partition the problem domain into smaller subdomains
 - Create a model of each subdomain in the solution
