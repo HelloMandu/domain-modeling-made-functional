@@ -102,4 +102,22 @@
 - Design for friction-free business workflows, always focus on business and customer value rather than any kind of "pure" design
 
 ### Creating Context Maps
+- It focuses only on the main routes so that you can plan your journey
+- Context map shows the various bounded contexts and their relationships at a high level. The goal is not to capture every detail but to provide a view of the system as a whole
 
+### Focusing on the Most Important Bounded Contexts
+- Generally, some domains are more important than others. These are the core domains--the ones that provide a business advantage, the ones that bring in the money
+- It is important to prioritize and not to attempt to implement all the bounded contexts at the same time--the often leads to failure
+- Focus instead on those bounded contexts that add the most value, and then expand from there
+
+### Creating a Ubiquitous Language
+- Code and the domain expert must share the same model
+- We should not have things in our design that do not represent something in the domain expert's model
+- The language that defines the shared mental model for the business domain. this language should used everywhere in the project
+- The construction of the ubiquitous language is not a one-way process dictated by the domain expert, it is a collaboration between everyone on the team
+
+### Wrapping Up
+- Focus on events and processes rather than data
+- Partition the problem domain into smaller subdomains
+- Create a model of each subdomain in the solution
+- Develop an "everywhere language" that can be shared between everyone involved in the project
